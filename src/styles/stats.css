@@ -1,0 +1,82 @@
+
+/* MODIFIED STATS SECTION FOR SLIDING */
+.stats {
+    padding: 5rem 2rem;
+    background: linear-gradient(135deg, #9E9C8D 0%, #454142 100%);
+    color: white;
+    text-align: center;
+    min-height: 100vh;       /* Ensure full coverage */
+    box-shadow: 
+        0 -10px 30px rgba(0, 0, 0, 0.1),
+        0 -20px 60px rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+
+.stats::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="medical" patternUnits="userSpaceOnUse" width="20" height="20"><path d="M10 2v16M2 10h16" stroke="rgba(0,212,255,0.1)" stroke-width="1" fill="none"/></pattern></defs><rect width="100" height="100" fill="url(%23medical)"/></svg>'); */
+    opacity: 0.3;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 3rem;
+    margin-top: 3rem;
+    max-width: 1000px;
+    margin: 3rem auto 0;
+    position: relative;
+    z-index: 1;
+}
+
+.stat-item {
+    padding: 30px 20px;
+    position: relative;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 212, 255, 0.2);
+    border-color: #526E52;
+}
+
+.stat-item h3 {
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(45deg, #526E52, #454142);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: block;
+    margin-bottom: 10px;
+    animation: countUp 2s ease-out;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: bold;
+    background: linear-gradient(45deg, #526E52, #454142);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    font-weight: 500;
+}
+
+@keyframes countUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,195 @@
+
+/*-------------------------PROGRAMS---------------------*/
+
+
+
+        .programs-section {
+            padding: 80px 20px;
+            min-height: 100vh;
+            position: relative;
+            background: white;
+            overflow-y: auto;
+        }
+
+        .programs-section-header {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+            z-index: 100;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .programs-section-subtitle {
+            font-size: 1.2rem;
+            color: rgba(0,0,0,0.9);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .programs-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            /* Add enough height for cards to stack properly */
+            /* height: 400vh; */
+            position: relative;
+        }
+
+        .program-card {
+            position: sticky !important;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            margin-bottom: 40px;
+            width: 100%;
+            max-width: 1100px;
+            margin-left: auto;
+            margin-right: auto;
+            transition: all 0.3s ease;
+            /* Add height to create proper spacing */
+            min-height: 200px;
+            height: 400px !important;
+            top: 20px !important;
+        }
+
+        /* Fixed staggered sticky positioning - each card sticks at a slightly different position */
+        .program-card:nth-child(1) {
+            top: 20px;
+            z-index: 10;
+        }
+
+        .program-card:nth-child(2) {
+            top: 40px;
+            z-index: 9;
+        }
+
+        .program-card:nth-child(3) {
+            top: 60px;
+            z-index: 8;
+        }
+
+        .program-card:nth-child(4) {
+            top: 80px;
+            z-index: 7;
+        }
+
+        .program-card:nth-child(5) {
+            top: 100px;
+            z-index: 6;
+        }
+
+        .program-card:nth-child(6) {
+            top: 120px;
+            z-index: 5;
+        }
+
+        .program-card:nth-child(7) {
+            top: 140px;
+            z-index: 4;
+        }
+
+        .program-card:nth-child(8) {
+            top: 160px;
+            z-index: 3;
+        }
+
+        .program-card:nth-child(9) {
+            top: 180px;
+            z-index: 2;
+        }
+
+        .program-card:nth-child(10) {
+            top: 200px;
+            z-index: 1;
+        }
+
+        .program-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            border-radius: 20px 20px 0 0;
+        }
+
+        .program-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+            z-index: 99 !important;
+        }
+
+        .program-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .program-number {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+
+        .program-description {
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .program-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .feature-tag {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .program-card {
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+                max-width: 100%;
+            }
+            
+            .program-card:nth-child(n) {
+                top: 60px;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
+            .program-card {
+                padding: 25px;
+            }
+        }

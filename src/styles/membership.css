@@ -1,0 +1,245 @@
+
+
+        /*-------------------Memberships section---------------------*/
+
+
+        
+        /* Membership Cards Container */
+        .membership-container {
+            position: relative;
+            z-index: 5;
+            display: flex;
+            
+            margin: 0 auto;
+            padding: 2rem;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            background: rgba(255,255,220);
+            padding: 150px;
+        }
+
+        .membership-card {
+            width: 280px;
+            height: 380px;
+            background: rgba(20, 28, 39, 0.95);
+            border-radius: 12px;
+            padding: 2.5rem 1.8rem;
+            text-align: center;
+            transition: all 0.4s ease;
+            border: 1px solid rgba(71, 85, 105, 0.3);
+            backdrop-filter: blur(20px);
+            position: relative;
+            z-index: 1;
+            transform: scale(0.9);
+        }
+
+        .membership-card:nth-child(1) {
+            z-index: 1;
+            transform: scale(0.9);
+        }
+
+        .membership-card:nth-child(2) {
+            z-index: 3;
+            transform: scale(1.0);
+            width: 320px;
+            height: 400px;
+            padding: 3rem 2rem;
+        }
+
+        .membership-card:nth-child(3) {
+            z-index: 1;
+            transform: scale(0.9);
+        }
+
+        .membership-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(96, 165, 250, 0.05), rgba(59, 130, 246, 0.05));
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: -1;
+            border-radius: 12px;
+        }
+
+        .membership-card:hover::before {
+            opacity: 1;
+        }
+
+        .membership-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            border-color: rgba(96, 165, 250, 0.4);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            z-index: 5;
+        }
+
+        .membership-card:nth-child(2):hover {
+            transform: translateY(-8px) scale(1.04);
+        }
+
+        .recommended-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(90deg, #64748b, #475569);
+            color: white;
+            padding: 0.4rem 1.2rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+            letter-spacing: 0.5px;
+        }
+
+        .card-title {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+            color: white;
+        }
+
+        .card-subtitle {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: #e2e8f0;
+        }
+
+        .card-description {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            color: #cbd5e1;
+        }
+
+        .learn-more-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #60a5fa;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .learn-more-btn::after {
+            content: "→";
+            transition: transform 0.3s ease;
+        }
+
+        .learn-more-btn:hover {
+            color: #3b82f6;
+            transform: translateX(5px);
+        }
+
+        .learn-more-btn:hover::after {
+            transform: translateX(5px);
+        }
+
+        /* Apex card special styling */
+        .apex-card {
+            border: 1px solid rgba(96, 165, 250, 0.4);
+            background: rgba(20, 28, 39, 0.98);
+            box-shadow: 0 8px 25px rgba(96, 165, 250, 0.15);
+        }
+
+        .apex-card:hover {
+            transform: translateY(-8px) scale(1.04);
+            border-color: rgba(96, 165, 250, 0.6);
+            box-shadow: 0 20px 40px rgba(96, 165, 250, 0.25);
+        }
+
+        /* Epic card styling */
+        .epic-card .card-subtitle {
+            color: #fbbf24;
+        }
+
+        .epic-card .learn-more-btn {
+            color: #fbbf24;
+        }
+
+        .epic-card .learn-more-btn:hover {
+            color: #f59e0b;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .membership-container {
+                flex-direction: column;
+                padding: 1rem;
+                gap: 1rem;
+            }
+            
+            .membership-card {
+                margin: 0;
+                width: 100%;
+                max-width: 320px;
+            }
+            
+            .membership-card:nth-child(2) {
+                transform: none;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .card-title {
+                font-size: 2.5rem;
+            }
+            
+            .membership-card {
+                padding: 2rem 1.5rem;
+                height: auto;
+            }
+        }
+
+        /* Animated background elements */
+        .bg-shape {
+            position: absolute;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(96, 165, 250, 0.1), rgba(59, 130, 246, 0.1));
+            animation: floatShape 15s ease-in-out infinite;
+        }
+
+        .bg-shape:nth-child(1) {
+            width: 300px;
+            height: 300px;
+            top: 10%;
+            left: 5%;
+            animation-delay: 0s;
+        }
+
+        .bg-shape:nth-child(2) {
+            width: 200px;
+            height: 200px;
+            top: 60%;
+            right: 10%;
+            animation-delay: 5s;
+        }
+
+        .bg-shape:nth-child(3) {
+            width: 250px;
+            height: 250px;
+            bottom: 20%;
+            left: 15%;
+            animation-delay: 10s;
+        }
+
+        @keyframes floatShape {
+            0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg); }
+            33% { transform: translateY(-30px) translateX(20px) rotate(120deg); }
+            66% { transform: translateY(20px) translateX(-15px) rotate(240deg); }
+        }
+
+        /*-------------------------END MEMBERSHIPS---------------------*/
+
+
+

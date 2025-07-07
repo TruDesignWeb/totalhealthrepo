@@ -1,0 +1,19 @@
+
+.cursor {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #06612f;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.1s ease;
+  mix-blend-mode: difference;
+}
+
+.cursor.hover {
+  transform: scale(2);
+  background: rgba(0, 212, 255, 0.2);
+  border-color: #ada76b;
+  pointer-events: none;
+}

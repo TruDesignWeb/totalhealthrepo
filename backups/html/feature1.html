@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Total Health Experience</title>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel = "stylesheet" href = "../css/index-styles[SCROLLUP].css">
+
+
+    <script type = "text/javascript" src="header-footerLoader.js"></script>
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png-icon" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png-icon" sizes="16x16" href="/favicon-16x16.png">
+
+
+<link rel="manifest" href="/site.webmanifest">
+</head>
+<body>
+    <section id = "banner">
+        <!-- <div id="navbar-frame"></div> -->
+        <!--FIIIIIX-->
+
+        <div class="navbar-container" id="navbar-container">
+    <!-- Top Navigation Strip -->
+    <div class="top-navbar">
+        <div class="top-nav-content">
+            <a href="#support" class="top-nav-link">Support</a>
+            <a href="#blog" class="top-nav-link">Blog</a>
+            <a href="#careers" class="top-nav-link">Careers</a>
+            <a href="#login" class="top-nav-link">Login</a>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="main-navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Total Health Logo</a>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#services" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#portfolio" class="nav-link">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+                <li class = "nav-item">
+                    <a href = "#" class = "nav-link cta">Appointments</a>
+                </li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+</div>
+
+    </section>
+
+
+    
+<div class = "content-wrapper">
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Revolutionary Healthcare</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">🧬</span>
+                    <h3>Precision Medicine</h3>
+                    <p>Personalized treatment plans based on your unique genetic profile, lifestyle, and health history for optimal outcomes.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🤖</span>
+                    <h3>AI Health Assistant</h3>
+                    <p>24/7 intelligent health monitoring and guidance powered by advanced artificial intelligence and machine learning.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">💊</span>
+                    <h3>Preventive Care</h3>
+                    <p>Proactive health strategies and early detection systems to prevent illness before it starts.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🧘</span>
+                    <h3>Mental Wellness</h3>
+                    <p>Comprehensive mental health support including therapy, mindfulness, and stress management programs.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">📱</span>
+                    <h3>Digital Health Hub</h3>
+                    <p>Seamless integration across all your devices for complete health tracking and telemedicine consultations.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🏃</span>
+                    <h3>Lifestyle Coaching</h3>
+                    <p>Expert guidance on nutrition, fitness, sleep, and wellness habits for sustainable health improvements.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    </div>
+
+
+
+<!----------------JAVASCRIPT---------------->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // Enhanced custom cursor with medical theme
+    const cursor = document.querySelector('.cursor');
+    const interactiveElements = document.querySelectorAll('a, button, .service-card, .stat-item');
+
+    document.addEventListener('mousemove', (e) => {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+    });
+
+    interactiveElements.forEach(element => {
+        element.addEventListener('mouseenter', () => {
+            cursor.classList.add('hover');
+        });
+        element.addEventListener('mouseleave', () => {
+            cursor.classList.remove('hover');
+        });
+    });
+
+    // Navbar elements
+    const navbarContainer = document.getElementById('navbar-container');
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    const nav = document.querySelector('.nav');
+
+    // Navbar scroll effect
+    let lastScrollTop = 0;
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        // Combined navbar scroll effects
+        if (scrollTop > 50) {
+            navbarContainer.classList.add('scrolled');
+        } else {
+            navbarContainer.classList.remove('scrolled');
+        }
+
+        // Navbar background on scroll
+        if (scrollTop > 100) {
+            nav.style.background = 'rgba(26, 26, 26, 0.9)';
+        } else {
+            nav.style.background = 'rgba(255, 255, 255, 0.1)';
+        }
+        
+        lastScrollTop = scrollTop;
+    });
+
+    // Mobile menu toggle
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+
+    // Unified smooth scrolling for navigation links
+    document.querySelectorAll('.nav-link, a[href^="#"]').forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            // Close mobile menu
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+            
+            const targetId = link.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+            
+            if (targetSection) {
+                const offsetTop = targetSection.offsetTop - 120;
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // Animate stats when they come into view
+    const observerOptions = {
+        threshold: 0.5,
+        rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const statNumbers = entry.target.querySelectorAll('.stat-item h3');
+                statNumbers.forEach(stat => {
+                    stat.style.animation = 'countUp 2s ease-out';
+                });
+            }
+        });
+    }, observerOptions);
+
+    const statsSection = document.querySelector('.stats');
+    if (statsSection) {
+        observer.observe(statsSection);
+    }
+
+    // Add holographic effect to feature cards
+    const featureCards = document.querySelectorAll('.feature-card');
+    featureCards.forEach((card, index) => {
+        card.style.animationDelay = `${index * 0.3}s`;
+        
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            const rotateX = (y - centerY) / 10;
+            const rotateY = (centerX - x) / 10;
+            
+            card.style.transform = `translateY(-15px) scale(1.02) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'translateY(0) scale(1) rotateX(0deg) rotateY(0deg)';
+        });
+    });
+
+    // Dynamic background particles
+    function createParticle() {
+        const particle = document.createElement('div');
+        particle.style.cssText = `
+            position: fixed;
+            width: ${Math.random() * 4}px;
+            height: ${Math.random() * 4}px;
+            background: rgba(0, 255, 136, 0.3);
+            border-radius: 50%;
+            left: ${Math.random() * window.innerWidth}px;
+            top: ${window.innerHeight}px;
+            pointer-events: none;
+            z-index: 1;
+        `;
+        
+        document.body.appendChild(particle);
+        
+        const animation = particle.animate([
+            { transform: 'translateY(0px)', opacity: 0 },
+            { transform: 'translateY(-100px)', opacity: 1 },
+            { transform: `translateY(-${window.innerHeight + 100}px)`, opacity: 0 }
+        ], {
+            duration: Math.random() * 3000 + 2000,
+            easing: 'linear'
+        });
+        
+        animation.onfinish = () => particle.remove();
+    }
+
+    // Create particles periodically
+    setInterval(createParticle, 300);
+
+    // Animate counters
+    function animateCounters() {
+        const counters = document.querySelectorAll('.stat-number');
+        counters.forEach(counter => {
+            const target = parseInt(counter.getAttribute('data-target'));
+            const increment = target / 200;
+            let current = 0;
+
+            const updateCounter = () => {
+                if (current < target) {
+                    current += increment;
+                    counter.textContent = Math.ceil(current);
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    counter.textContent = target;
+                    counter.parentElement.classList.add('heartbeat');
+                }
+            };
+
+            const counterObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        updateCounter();
+                        counterObserver.disconnect();
+                    }
+                });
+            });
+
+            counterObserver.observe(counter);
+        });
+    }
+
+    animateCounters();
+});
+</script>
+
+    
+</body>
+</html>

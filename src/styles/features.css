@@ -1,0 +1,186 @@
+
+
+/* MODIFIED FEATURES SECTION FOR SLIDING */
+.features {
+    padding: 6rem 2rem;
+    background: linear-gradient(180deg, #9E9C8D 0%, #454142 50%, #526E52 100%);
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;       /* Ensure full coverage */
+    box-shadow: 
+        0 -10px 30px rgba(0, 0, 0, 0.1),
+        0 -20px 60px rgba(0, 0, 0, 0.05);
+}
+
+.features::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation: slide 30s linear infinite;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0) translateY(0); }
+    100% { transform: translateX(-50px) translateY(-43.4px); }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 4rem;
+    background: linear-gradient(45deg, #454142, #9E9C8D);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 0 40px rgba(0,255,136,0.3);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+    padding: 2rem 0;
+}
+
+.feature-card {
+    background: linear-gradient(145deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 3rem 2rem;
+    border-radius: 30px;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0,255,136,0.1), transparent);
+    transition: left 0.6s ease;
+}
+
+.feature-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(0,255,136,0.05) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(0,255,136,0.2);
+    border-color: rgba(182, 214, 108, 0.4);
+}
+
+.feature-card:hover::before {
+    left: 100%;
+}
+
+.feature-card:hover::after {
+    opacity: 1;
+}
+
+.feature-icon {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    display: block;
+    background: linear-gradient(45deg, #beca78, #296d0a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 0 20px rgba(0,255,136,0.3));
+    animation: bounce 3s ease-in-out infinite;
+    position: relative;
+    
+}
+
+.feature-icon::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -500%);
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(circle, rgba(236, 214, 90, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: -1;
+    animation: pulse 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    33% { transform: translateY(-8px) rotate(2deg); }
+    66% { transform: translateY(8px) rotate(-2deg); }
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.3; transform: translate(-50%, -50%) scale(1); }
+    50% { opacity: 0.6; transform: translate(-50%, -50%) scale(1.1); }
+}
+
+.feature-card h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(45deg, #1a1a1a, #4a5568);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+}
+
+.feature-card h3::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(45deg, #96ac37, #087c0e);
+    transition: width 0.4s ease;
+}
+
+.feature-card:hover h3::after {
+    width: 100%;
+}
+
+.feature-card p {
+    color: #4a5568;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    position: relative;
+    z-index: 2;
+}

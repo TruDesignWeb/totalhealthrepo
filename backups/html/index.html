@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Total Health Experience</title>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel = "stylesheet" href = "../css/index-styles[SCROLLUP].css">
+
+
+    <script type = "text/javascript" src="header-footerLoader.js"></script>
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png-icon" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png-icon" sizes="16x16" href="/favicon-16x16.png">
+
+
+<link rel="manifest" href="/site.webmanifest">
+</head>
+<body>
+    <!-- <section id = "banner">
+        <div id="navbar-frame"></div>
+    </section> -->
+
+    <!--Have the custom nav on the index page but load the non-custom one on all other pages with above code^^^-->
+
+<div class="navbar-container" id="navbar-container">
+    <!-- Top Navigation Strip -->
+    <div class="top-navbar">
+        <div class="top-nav-content">
+            <a href="#support" class="top-nav-link">Support</a>
+            <a href="#blog" class="top-nav-link">Blog</a>
+            <a href="#careers" class="top-nav-link">Careers</a>
+            <a href="#login" class="top-nav-link">Login</a>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="main-navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Total Health Logo</a>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#services" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#portfolio" class="nav-link">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+                <li class = "nav-item">
+                    <a href = "#" class = "nav-link cta">Appointments</a>
+                </li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<div class="banner">
+    <!-- Video Background -->
+    <div class="video-background">
+        <video autoplay muted loop>
+            <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+            <!-- Fallback for browsers that don't support video -->
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+    
+    <div class="banner-content">
+        <h1>Welcome to Total Health</h1>
+        <p>Experience cutting-edge treatments with all star doctors</p>
+        <a href="#about" class="banner-btn">Explore Now</a>
+    </div>
+</div>
+
+
+<div class = "content-wrapper">
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Revolutionary Healthcare</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">🧬</span>
+                    <h3>Precision Medicine</h3>
+                    <p>Personalized treatment plans based on your unique genetic profile, lifestyle, and health history for optimal outcomes.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🤖</span>
+                    <h3>AI Health Assistant</h3>
+                    <p>24/7 intelligent health monitoring and guidance powered by advanced artificial intelligence and machine learning.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">💊</span>
+                    <h3>Preventive Care</h3>
+                    <p>Proactive health strategies and early detection systems to prevent illness before it starts.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🧘</span>
+                    <h3>Mental Wellness</h3>
+                    <p>Comprehensive mental health support including therapy, mindfulness, and stress management programs.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">📱</span>
+                    <h3>Digital Health Hub</h3>
+                    <p>Seamless integration across all your devices for complete health tracking and telemedicine consultations.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🏃</span>
+                    <h3>Lifestyle Coaching</h3>
+                    <p>Expert guidance on nutrition, fitness, sleep, and wellness habits for sustainable health improvements.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">Transforming Lives</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="98">0%</span>
+                <span class="stat-label">% Patient Satisfaction</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="1500">0</span>
+                <span class="stat-label">Patients Treated</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="1500">0</span>
+                <span class="stat-label">Patients Treated</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="15">0</span>
+                <span class="stat-label">Years of Excellence</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    
+    <section class="programs-section">
+        <div class="programs-section-header">
+            <h2 class="section-title">Longevity Programs</h2>
+            <p class="programs-section-subtitle">We offer comprehensive programs, each focusing on different body systems to optimize your health and extend your lifespan.</p>
+        </div>
+
+        <div class="programs-container">
+            <div class="program-card">
+                <h3 class="program-title">
+                    <span class="program-number">01</span>
+                    Longevity 360
+                </h3>
+                <p class="program-description">Comprehensive assessments and personalized interventions aimed at enhancing overall lifespan and healthspan. We utilize advanced diagnostic tools to identify key factors impacting your aging process and design a tailored plan to optimize your health and vitality.</p>
+                <div class="program-features">
+                    <span class="feature-tag">Advanced Diagnostics</span>
+                    <span class="feature-tag">Personalized Plan</span>
+                    <span class="feature-tag">Cutting-edge Therapies</span>
+                </div>
+            </div>
+
+            <div class="program-card">
+                <h3 class="program-title">
+                    <span class="program-number">02</span>
+                    Weight Loss
+                </h3>
+                <p class="program-description">Holistic approach to achieving and maintaining a healthy weight. Our team conducts thorough evaluations to understand your unique metabolic needs and designs a customized plan incorporating nutrition, exercise, and behavioral strategies.</p>
+                <div class="program-features">
+                    <span class="feature-tag">Metabolic Analysis</span>
+                    <span class="feature-tag">Custom Nutrition</span>
+                    <span class="feature-tag">Behavioral Support</span>
+                </div>
+            </div>
+
+            <div class="program-card">
+                <h3 class="program-title">
+                    <span class="program-number">03</span>
+                    Hormone Balance
+                </h3>
+                <p class="program-description">Addresses hormonal imbalances that can affect your overall health and well-being. We perform detailed hormonal assessments to identify imbalances and create a personalized treatment plan including bioidentical hormone replacement therapy.</p>
+                <div class="program-features">
+                    <span class="feature-tag">Hormonal Assessment</span>
+                    <span class="feature-tag">Bioidentical HRT</span>
+                    <span class="feature-tag">Lifestyle Changes</span>
+                </div>
+            </div>
+
+            <div class="program-card">
+                <h3 class="program-title">
+                    <span class="program-number">04</span>
+                    Regenerative Medicine
+                </h3>
+                <p class="program-description">Leverages advanced therapies to promote healing and regeneration of damaged tissues. We utilize cutting-edge techniques such as stem cell therapy, platelet-rich plasma (PRP), and micro-fragmented adipose tissue treatments.</p>
+                <div class="program-features">
+                    <span class="feature-tag">Stem Cell Therapy</span>
+                    <span class="feature-tag">PRP Treatment</span>
+                    <span class="feature-tag">Tissue Regeneration</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+        <div class="membership-container">
+            <div class="membership-card">
+                <h2 class="card-title">CORE</h2>
+                <h3 class="card-subtitle">Don't die from something stupid</h3>
+                <p class="card-description">Our advanced diagnostics program focused on early disease detection</p>
+                <a href="#" class="learn-more-btn">Learn More</a>
+            </div>
+
+            <div class="membership-card apex-card">
+                <div class="recommended-badge">Recommended</div>
+                <h2 class="card-title">APEX</h2>
+                <h3 class="card-subtitle">Live without limits</h3>
+                <p class="card-description">The world's leading longevity membership for those who refuse to settle</p>
+                <a href="#" class="learn-more-btn">Learn More</a>
+            </div>
+
+            <div class="membership-card epic-card">
+                <h2 class="card-title">EPIC</h2>
+                <h3 class="card-subtitle">Re-engineer your potential<br>(Interview Only)</h3>
+                <p class="card-description">Our personalized high performance membership.</p>
+                <a href="#" class="learn-more-btn">Request Interview</a>
+            </div>
+        </div>
+
+
+
+<!----------OUTCOMES----------------->
+<section class = "outcomes-section">
+<div class="outcomes-container">
+    <div class="outcomes-label">PROGRAMS</div>
+
+    <div class="outcomes-content-wrapper">
+        <div class="outcomes-title-section">
+            <h1>Anticipated Outcomes</h1>
+        </div>
+        
+        <div class="outcomes-intro-text">
+            We expect our clients to drastically reduce their rate of aging which could lead to a reduced risk for all major diseases such as cardiovascular disease, Alzheimer's disease, cancer, metabolic syndrome, and frailty. Additional benefits include:
+        </div>
+    </div>
+
+    <div class="outcomes-grid">
+        <div class="outcome-item">
+            <div class="outcome-icon">⚡</div>
+            <div class="outcome-title">Boost in physical and mental performance</div>
+            <div class="outcome-description">Enhanced strength, endurance, and mental clarity for daily tasks and activities.</div>
+        </div>
+
+        <div class="outcome-item">
+            <div class="outcome-icon">📈</div>
+            <div class="outcome-title">Improved body composition</div>
+            <div class="outcome-description">Increased muscle mass and reduced body fat for a healthier physique</div>
+        </div>
+
+        <div class="outcome-item">
+            <div class="outcome-icon">🌙</div>
+            <div class="outcome-title">Improved sleep quality</div>
+            <div class="outcome-description">Deeper, more restful sleep, leading to better recovery and daily function.</div>
+        </div>
+
+        <div class="outcome-item">
+            <div class="outcome-icon">📊</div>
+            <div class="outcome-title">An overall boost in energy</div>
+            <div class="outcome-description">Higher energy levels throughout the day, reducing fatigue and increasing productivity.</div>
+        </div>
+
+        <div class="outcome-item">
+            <div class="outcome-icon">🏃</div>
+            <div class="outcome-title">Mobility</div>
+            <div class="outcome-description">Greater flexibility and ease of movement, reducing pain and risk of injury.</div>
+        </div>
+
+        <div class="outcome-item">
+            <div class="outcome-icon">✨</div>
+            <div class="outcome-title">Lower biological age</div>
+            <div class="outcome-description">Slower aging process at the cellular level, contributing to a longer and healthier lifespan.</div>
+        </div>
+
+        <div class="outcome-item">
+            <div class="outcome-icon">🧠</div>
+            <div class="outcome-title">Improved cognition and overall brain health</div>
+            <div class="outcome-description">Sharper memory, quicker thinking, and better decision-making abilities.</div>
+        </div>
+
+        <div class="outcome-item">
+            <div class="outcome-icon">❤️</div>
+            <div class="outcome-title">Improved sexual health</div>
+            <div class="outcome-description">Enhanced libido and better sexual performance.</div>
+        </div>
+    </div>
+</div>
+</section>
+
+
+
+<section class = "journey-section">
+    <div class="journey-container">
+        <div class="journey-hero-section">
+            <h1 class="journey-hero-title">Your journey starts here</h1>
+            <p class="journey-hero-subtitle">Unlock personalized insights and advanced solutions to optimize your health and extend your lifespan.</p>
+            <button class="journey-cta-button">Extend Your Lifespan</button>
+        </div>
+
+        <div class="journey-feature-card precision-diagnostics">
+            <h2 class="journey-feature-title">Precision Diagnostics</h2>
+            <p class="journey-feature-description">Identify the risk of life-threatening diseases early with our advanced multi-modal diagnostics.</p>
+        </div>
+
+        <div class="journey-feature-card performance-optimization">
+            <h2 class="journey-feature-title">Performance Optimization</h2>
+            <p class="journey-feature-description">Learn what your body needs to maximize healthful longevity.</p>
+        </div>
+
+        <div class="journey-feature-card regenerative-medicine">
+            <h2 class="journey-feature-title">Regenerative Medicine</h2>
+            <p class="journey-feature-description">Restore your physical peak with breakthrough therapeutics.</p>
+        </div>
+    </div>
+</section>
+    
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-section-1">
+            <h3 >Medical Center Location</h3>
+            <p>7601 Medical Plaza<br>Suite 110<br>West Des Moines, IA 50266</p>
+            <p>Phone: (515) 555-CARE<br>Email: care@totalhealthexp.com</p>
+        </div>
+        <div class="footer-section">
+            <h3 data-icon="⚕️">Medical Services</h3>
+            <p><a href="#">Emergency Medicine</a></p>
+            <p><a href="#">Advanced Diagnostics</a></p>
+            <p><a href="#">Cardiology Center</a></p>
+            <p><a href="#">Neurology Services</a></p>
+        </div>
+        <div class="footer-section">
+            <h3 data-icon="🔬">Research & Innovation</h3>
+            <p>Leading medical research and clinical trials advancing healthcare technology and treatment methodologies.</p>
+            <p><a href="#">Clinical Research</a></p>
+            <p><a href="#">Medical Innovation</a></p>
+        </div>
+        <div class="footer-section">
+            <h3 data-icon="🔬">Follow us</h3>
+            <p>Leading medical research and clinical trials advancing healthcare technology and treatment methodologies.</p>
+            <p><a href="#">Clinical Research</a></p>
+            <p><a href="#">Medical Innovation</a></p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Total Health Experience. Dedicated to exceptional medical care and patient wellness.</p>
+    </div>
+</footer>
+
+</div>
+
+
+
+
+
+
+
+<!----------------JAVASCRIPT---------------->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // Enhanced custom cursor with medical theme
+    const cursor = document.querySelector('.cursor');
+    const interactiveElements = document.querySelectorAll('a, button, .service-card, .stat-item');
+
+    document.addEventListener('mousemove', (e) => {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+    });
+
+    interactiveElements.forEach(element => {
+        element.addEventListener('mouseenter', () => {
+            cursor.classList.add('hover');
+        });
+        element.addEventListener('mouseleave', () => {
+            cursor.classList.remove('hover');
+        });
+    });
+
+    // Navbar elements
+    const navbarContainer = document.getElementById('navbar-container');
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    const nav = document.querySelector('.nav');
+
+    // Navbar scroll effect
+    let lastScrollTop = 0;
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        // Combined navbar scroll effects
+        if (scrollTop > 50) {
+            navbarContainer.classList.add('scrolled');
+        } else {
+            navbarContainer.classList.remove('scrolled');
+        }
+
+        // Navbar background on scroll
+        if (scrollTop > 100) {
+            nav.style.background = 'rgba(26, 26, 26, 0.9)';
+        } else {
+            nav.style.background = 'rgba(255, 255, 255, 0.1)';
+        }
+        
+        lastScrollTop = scrollTop;
+    });
+
+    // Mobile menu toggle
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+
+    // Unified smooth scrolling for navigation links
+    document.querySelectorAll('.nav-link, a[href^="#"]').forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            // Close mobile menu
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+            
+            const targetId = link.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+            
+            if (targetSection) {
+                const offsetTop = targetSection.offsetTop - 120;
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // Animate stats when they come into view
+    const observerOptions = {
+        threshold: 0.5,
+        rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const statNumbers = entry.target.querySelectorAll('.stat-item h3');
+                statNumbers.forEach(stat => {
+                    stat.style.animation = 'countUp 2s ease-out';
+                });
+            }
+        });
+    }, observerOptions);
+
+    const statsSection = document.querySelector('.stats');
+    if (statsSection) {
+        observer.observe(statsSection);
+    }
+
+    // Add holographic effect to feature cards
+    const featureCards = document.querySelectorAll('.feature-card');
+    featureCards.forEach((card, index) => {
+        card.style.animationDelay = `${index * 0.3}s`;
+        
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            const rotateX = (y - centerY) / 10;
+            const rotateY = (centerX - x) / 10;
+            
+            card.style.transform = `translateY(-15px) scale(1.02) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'translateY(0) scale(1) rotateX(0deg) rotateY(0deg)';
+        });
+    });
+
+    // Dynamic background particles
+    function createParticle() {
+        const particle = document.createElement('div');
+        particle.style.cssText = `
+            position: fixed;
+            width: ${Math.random() * 4}px;
+            height: ${Math.random() * 4}px;
+            background: rgba(0, 255, 136, 0.3);
+            border-radius: 50%;
+            left: ${Math.random() * window.innerWidth}px;
+            top: ${window.innerHeight}px;
+            pointer-events: none;
+            z-index: 1;
+        `;
+        
+        document.body.appendChild(particle);
+        
+        const animation = particle.animate([
+            { transform: 'translateY(0px)', opacity: 0 },
+            { transform: 'translateY(-100px)', opacity: 1 },
+            { transform: `translateY(-${window.innerHeight + 100}px)`, opacity: 0 }
+        ], {
+            duration: Math.random() * 3000 + 2000,
+            easing: 'linear'
+        });
+        
+        animation.onfinish = () => particle.remove();
+    }
+
+    // Create particles periodically
+    setInterval(createParticle, 300);
+
+    // Animate counters
+    function animateCounters() {
+        const counters = document.querySelectorAll('.stat-number');
+        counters.forEach(counter => {
+            const target = parseInt(counter.getAttribute('data-target'));
+            const increment = target / 200;
+            let current = 0;
+
+            const updateCounter = () => {
+                if (current < target) {
+                    current += increment;
+                    counter.textContent = Math.ceil(current);
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    counter.textContent = target;
+                    counter.parentElement.classList.add('heartbeat');
+                }
+            };
+
+            const counterObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        updateCounter();
+                        counterObserver.disconnect();
+                    }
+                });
+            });
+
+            counterObserver.observe(counter);
+        });
+    }
+
+    animateCounters();
+});
+
+
+// Add click tracking for membership cards
+        document.querySelectorAll('.learn-more-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const cardType = this.closest('.membership-card').querySelector('.card-title').textContent;
+                console.log(`User clicked on ${cardType} membership`);
+                
+                // Add subtle animation on click
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                }, 150);
+            });
+        });
+
+        // Add parallax effect to background shapes
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const shapes = document.querySelectorAll('.bg-shape');
+            
+            shapes.forEach((shape, index) => {
+                const speed = 0.5 + (index * 0.1);
+                shape.style.transform = `translateY(${scrolled * speed}px)`;
+            });
+        });
+
+        // Add intersection observer for card animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all membership cards
+        document.querySelectorAll('.membership-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+
+        // Add dynamic gradient animation
+        let gradientAngle = 135;
+        setInterval(() => {
+            gradientAngle += 0.5;
+            document.querySelector('.hero').style.background = 
+                `linear-gradient(${gradientAngle}deg, 
+                    #1e293b 0%, 
+                    #334155 25%, 
+                    #475569 50%, 
+                    #60a5fa 75%, 
+                    #3b82f6 100%)`;
+        }, 100);
+
+
+
+
+
+        //for your journey cards
+
+        
+ // Add subtle interactive effects
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.feature-card');
+            
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-8px) scale(1.02)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+
+            
+            // CTA button click effect
+            const ctaButton = document.querySelector('.cta-button');
+            ctaButton.addEventListener('click', function() {
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                }, 150);
+            });
+        });
+</script>
+
+
+</body>
+</html>
