@@ -14,16 +14,27 @@ import useRevealOnScroll from '../hooks/useRevealOnScroll';
 import '../styles/animations.css';
 import InfiniteScroll from '../components/infinitescroll';
 import TiltedCard from '../components/tiltedcard';
-import FluidGlass from '../components/fluidglass'
+import FluidGlass from '../components/fluidglass';
+import Banner2 from '../components/banner2';
 
 
 export default function About(){
     useRevealOnScroll()
     return(
         <>
+        <CustomCursor />
+        
         <Navbar />
+        <Banner2 
+            image = "/assets/images/milky-way-full-stars-space.jpg"
+            title = "Your Wellness starts here"
+            subtitle= "Discover a new path to living with the fountain of youth"
+        />
+        
 
 
+        <Features />
+        <Stats />
 
         <Footer />
 
