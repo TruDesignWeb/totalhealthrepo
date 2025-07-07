@@ -2,6 +2,7 @@
 // File: src/components/Footer.jsx
 import React from 'react';
 import '../styles/footer.css';
+import ContactForm from '../components/contactform';
 
 export default function Footer() {
   return (
@@ -19,17 +20,23 @@ export default function Footer() {
           <p><a href="#">Cardiology Center</a></p>
           <p><a href="#">Neurology Services</a></p>
         </div>
-        <div className="footer-section">
+        {/* <div className="footer-section">
           <h3 data-icon="🔬">Research & Innovation</h3>
           <p>Leading medical research and clinical trials advancing healthcare technology and treatment methodologies.</p>
           <p><a href="#">Clinical Research</a></p>
           <p><a href="#">Medical Innovation</a></p>
-        </div>
+        </div> */}
         <div className="footer-section">
-          <h3 data-icon="🔬">Follow us</h3>
+          {/* <h3 data-icon="🔬">Follow us</h3>
           <p>Leading medical research and clinical trials advancing healthcare technology and treatment methodologies.</p>
           <p><a href="#">Clinical Research</a></p>
-          <p><a href="#">Medical Innovation</a></p>
+          <p><a href="#">Medical Innovation</a></p> */}
+            <ContactForm
+            title="Join Our Health Community"
+            subtitle="Sign up and get the latest wellness tips in your inbox."
+            placeholder="you@example.com"
+            buttonText="Join Now"
+              />
         </div>
       </div>
       <div className="footer-bottom">

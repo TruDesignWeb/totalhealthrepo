@@ -14,7 +14,8 @@ import useRevealOnScroll from '../hooks/useRevealOnScroll';
 import '../styles/animations.css';
 import InfiniteScroll from '../components/infinitescroll';
 import TiltedCard from '../components/tiltedcard';
-import FluidGlass from '../components/fluidglass'
+import FluidGlass from '../components/fluidglass';
+
 
 
 
@@ -70,6 +71,7 @@ export default function Home() {
          */}
         
       </div>
+
       <Footer />
     </>
   );
