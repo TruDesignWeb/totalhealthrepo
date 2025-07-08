@@ -45,11 +45,11 @@ export default function Navbar() {
           <Link to="#" className="logo">Total Health Logo</Link>
           <ul className={`nav-menu ${menuOpen ? 'active' : ''}`} id="nav-menu">
             <li className="nav-item"><Link to="/" className="nav-link">Home</Link></li>
-            <li className="nav-item"><Link to="About" className="nav-link">About</Link></li>
-            <li className="nav-item"><Link to="Services" className="nav-link">Services</Link></li>
-            <li className="nav-item"><Link to="Page4" className="nav-link">Portfolio</Link></li>
-            <li className="nav-item"><Link to="Contact" className="nav-link">Contact</Link></li>
-            <li className="nav-item"><Link to="Appointments" className="nav-link cta">Appointments</Link></li>
+            <li className="nav-item"><Link to="/About" className="nav-link">About</Link></li>
+            <li className="nav-item"><Link to="/Services" className="nav-link">Services</Link></li>
+            <li className="nav-item"><Link to="/Page4" className="nav-link">Portfolio</Link></li>
+            <li className="nav-item"><Link to="/Contact" className="nav-link">Contact</Link></li>
+            <li className="nav-item"><Link to="/Appointments" className="nav-link cta">Appointments</Link></li>
           </ul>
           <div className={`hamburger ${menuOpen ? 'active' : ''}`} id="hamburger" onClick={toggleMenu}>
             <span></span>
