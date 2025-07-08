@@ -76,10 +76,10 @@ export default function Home() {
       <div className="content-wrapper">
         
         <Features
-              title="Customized Feature Section"
-              cards={featureCards}
-              variant="features--alt" // Optional: for different styles
-            />
+          title="Customized Feature Section"
+          cards={featureCards}
+          variant="features--alt" // Optional: for different styles
+        />
         
         
 
@@ -94,8 +94,7 @@ export default function Home() {
           variant="dark-theme"
         />
         
-        <Membership />
-
+        
 
         <Outcomes
           variant = "about"
@@ -144,42 +143,24 @@ export default function Home() {
               },
             ]}
         />
+
+        <Membership />
+
+
         <InfiniteScroll
-        items={[
-            { content: "Truman" },
-            { content: <p>Vasi</p> },
-            { content: "Vasi" },
-            { content: <p>Truman</p> }
-            ]}
-            isTilted={true}
-            tiltDirection='right'
-            autoplay={true}
-            autoplaySpeed={0.2}
-            autoplayDirection="down"
-            pauseOnHover={true}
-            />      
-
-
-
-
-
-
-    {/* <div style={{ height: '600px', position: 'relative' }}>
-    <FluidGlass 
-        mode="lens" // or "bar", "cube"
-        lensProps={{
-        scale: 0.25,
-        ior: 1.15,
-        thickness: 5,
-        chromaticAberration: 0.1,
-        anisotropy: 0.01  
-        }}
-        backgroundColor = '#000'
-        // barProps={} // add specific props if using bar mode
-        // cubeProps={} // add specific props if using cube mode
-    />
-    </div>
-         */}
+          items={[
+          { content: "Truman" },
+          { content: <p>Vasi</p> },
+          { content: "Vasi" },
+          { content: <p>Truman</p> }
+          ]}
+          isTilted={true}
+          tiltDirection='right'
+          autoplay={true}
+          autoplaySpeed={0.2}
+          autoplayDirection="down"
+          pauseOnHover={true}
+        />      
         
       </div>
 
