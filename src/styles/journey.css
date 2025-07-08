@@ -109,21 +109,21 @@
         }
 
         .precision-diagnostics {
-            background-image: url('../images/milky-way-full-stars-space.jpg');
+            background-image: url('/assets/images/milky-way-full-stars-space.jpg');
             background-position: center;
             background-size: cover;
         }
 
         .performance-optimization
         {
-            background-image: url('../images/milky-way-full-stars-space.jpg');
+            background-image: url('/assets/images/milky-way-full-stars-space.jpg');
             background-position: center;
             background-size: cover;
         }
 
         .regenerative-medicine
         {
-            background-image: url('../images/milky-way-full-stars-space.jpg');
+            background-image: url('/assets/images/milky-way-full-stars-space.jpg');
             background-position: center;
             background-size: cover;
         }

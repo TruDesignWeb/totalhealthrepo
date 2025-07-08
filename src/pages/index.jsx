@@ -31,7 +31,33 @@ export default function Home() {
         <Stats />
         {/* <Programs /> */}
         <Membership />
-        <Outcomes />
+
+
+        <Outcomes
+        variant = "about"
+        label="FEATURED BENEFITS"
+        title="What You’ll Gain"
+        introText="Our holistic approach promotes wellness from within, leading to lasting benefits such as:"
+        outcomes={[
+          {
+            icon: '💪',
+            title: 'Stronger Immunity',
+            description: 'Fortified defenses against illness and faster recovery times.',
+          },
+          {
+            icon: '🧘',
+            title: 'Mental Clarity',
+            description: 'Reduced stress and improved focus and decision-making.',
+          },
+          {
+            icon: '🍽️',
+            title: 'Better Digestion',
+            description: 'Healthier gut and improved nutrient absorption.',
+          },
+        ]}
+      />
+
+
         <Journey />
         <InfiniteScroll
         items={[
