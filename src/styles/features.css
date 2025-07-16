@@ -3,7 +3,7 @@
 /* MODIFIED FEATURES SECTION FOR SLIDING */
 .features {
     padding: 6rem 2rem;
-    background: linear-gradient(180deg, #9E9C8D 0%, #454142 50%, #526E52 100%);
+    background: rgb(255, 253, 239);
     position: relative;
     overflow: hidden;
     min-height: 100vh;       /* Ensure full coverage */
