@@ -42,7 +42,7 @@ export default function Navbar() {
       {/* Main Navigation */}
       <nav className="main-navbar" id="navbar">
         <div className="nav-container">
-          <Link to="#" className="logo">Total Health Logo</Link>
+          <Link to="#" className="logo"><img src="/assets/images/thlogo.png" alt="Total Health Logo" className = "logo-img" /></Link>
           <ul className={`nav-menu ${menuOpen ? 'active' : ''}`} id="nav-menu">
             <li className="nav-item"><Link to="/" className="nav-link">Home</Link></li>
             <li className="nav-item"><Link to="/About" className="nav-link">About</Link></li>
