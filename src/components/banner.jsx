@@ -9,7 +9,7 @@ export default function Banner() {
     <div className="banner">
       <div className="video-background">
         <video autoPlay muted loop>
-          <source src="/assets/TotalHealthConstructionVideo.mp4" type="video/mp4" />
+          <source src="https://k5xcne8zxjnniehu.public.blob.vercel-storage.com/TotalHealthConstructionVideo.mp4" type="video/mp4" />
         </video>
         <div className="video-overlay" />
       </div>
