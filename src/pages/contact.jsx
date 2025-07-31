@@ -15,12 +15,37 @@ import '../styles/animations.css';
 import InfiniteScroll from '../components/infinitescroll';
 import TiltedCard from '../components/tiltedcard';
 import FluidGlass from '../components/fluidglass';
-import Banner2 from '../components/banner2';
-
 
 import "./contact.css";
+import Banner2 from '../components/banner2';
+import { useState, useEffect } from "react";
+
+
 
 export default function Contact() {
+  const [form, setForm] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    message: ''
+  });
+
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const response = await fetch('http://localhost:5000/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(form),
+    });
+
+    const result = await response.json();
+    alert(result.message);
+  };
     useRevealOnScroll()
   return (
     
@@ -46,14 +71,30 @@ export default function Contact() {
           </div>
 
           {/* Right Contact Form */}
-          <form className="contact-form">
+          <form className="contact-form" onSubmit={handleSubmit}>
             <div className="form-row">
-              <input type="text" placeholder="First Name" required />
-              <input type="text" placeholder="Last Name" />
+              <input type="text" name="firstName"
+              placeholder="First Name"
+              value={form.firstName}
+              onChange={handleChange}
+              required />
+              <input type="text"
+              name="lastName"
+              placeholder="Last Name"
+              value={form.lastName}
+              onChange={handleChange} />
             </div>
-            <input type="email" placeholder="Email *" required />
-            <textarea placeholder="Message"></textarea>
-            <button type="submit">Send</button>
+            <input type="email"
+            name="email"
+            placeholder="Email *"
+            value={form.email}
+            onChange={handleChange}
+            required />
+            <textarea  name="message"
+            placeholder="Message"
+            value={form.message}
+            onChange={handleChange}></textarea>
+            <button type="submit">Submit</button>
           </form>
         </div>
       </section>
