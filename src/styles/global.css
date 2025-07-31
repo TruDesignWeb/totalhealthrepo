@@ -5,6 +5,13 @@ box-sizing: border-box;
 cursor: none;
 }
 
+#root {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+/*fixed width problem!!*/
+
 @font-face {
     font-family: 'Mundial';
     src: url('/fonts/MundialRegular.otf') format('otf'),

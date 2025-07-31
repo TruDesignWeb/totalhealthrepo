@@ -7,6 +7,9 @@
   position: relative;
   overflow: hidden;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: auto;   /* Ensure full width */
   box-shadow: 
     0 -10px 30px rgba(0, 0, 0, 0.1),
@@ -54,6 +57,7 @@
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 3rem;
     padding: 2rem 0;
+    padding-left: 10%;
 }
 
 .feature-card {
