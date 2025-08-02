@@ -37,6 +37,8 @@ app.post("/api/contact", async (req, res) => {
     const newContact = new Contact(req.body);
     await newContact.save();
 
+    //sending auto emails!! for future reference
+
     // Optional email notification
     // const transporter = nodemailer.createTransport({
     //   service: "gmail",
