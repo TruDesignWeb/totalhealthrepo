@@ -3,6 +3,8 @@
 import React from 'react';
 import '../styles/footer.css';
 import ContactForm from '../components/contactform';
+import { useState } from 'react';
+import axios from 'axios';
 
 export default function Footer() {
   return (

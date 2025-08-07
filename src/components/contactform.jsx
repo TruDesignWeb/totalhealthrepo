@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import '../styles/contactform.css';
+import axios from 'axios';
 
 export default function NewsletterSignup({
   title = "Subscribe to our Newsletter",
@@ -10,15 +11,22 @@ export default function NewsletterSignup({
   const [email, setEmail] = useState('');
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!email) return;
-    // Replace with actual email service logic here
+    
+  try {
+    await axios.post('http://localhost:5000/api/newsletter', { email });
     setSubmitted(true);
     setTimeout(() => {
       setSubmitted(false);
       setEmail('');
     }, 3000);
+  } catch (err) {
+    console.error('Newsletter subscription failed:', err);
+    alert('Failed to subscribe. Try again later.');
+  }
+
   };
 
   return (
