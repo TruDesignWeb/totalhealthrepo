@@ -44,13 +44,6 @@ const NewsletterSubscriber = mongoose.model('NewsletterSubscriber', NewsletterSc
 
 
 
-const UserSchema = new mongoose.Schema({
-  email: { type: String, required: true, unique: true },
-  password: { type: String, required: true }
-});
-
-export default mongoose.model('User', UserSchema);
-
 
 // API route for contact form
 app.post("/api/contact", async (req, res) => {

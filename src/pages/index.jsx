@@ -15,6 +15,8 @@ import '../styles/animations.css';
 import InfiniteScroll from '../components/infinitescroll';
 import TiltedCard from '../components/tiltedcard';
 import FluidGlass from '../components/fluidglass';
+import Register from '../components/register';
+import Login from '../components/login';
 
 
 const featureCards = [
@@ -145,6 +147,9 @@ export default function Home() {
         />
 
         <Membership />
+
+        <Register />
+        <Login />
 
 
         {/* <InfiniteScroll
