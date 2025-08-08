@@ -127,5 +127,36 @@ app.post('/api/login', async (req, res) => {
   }
 });
 
+
+
+
+
+//handle returning users
+
+import jwt from "jsonwebtoken";
+
+const JWT_SECRET = "yourSuperSecretKey"; // ⚠️ Store securely using dotenv in production
+
+app.post("/api/login", async (req, res) => {
+  const { email, password } = req.body;
+
+  try {
+    const user = await User.findOne({ email });
+    if (!user || user.password !== password) {
+      return res.status(401).json({ message: "Invalid credentials" });
+    }
+
+    // Create token
+    const token = jwt.sign({ userId: user._id }, JWT_SECRET, { expiresIn: "2h" });
+
+    res.json({ token });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: "Server error" });
+  }
+});
+
+
+
 // Start server
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));

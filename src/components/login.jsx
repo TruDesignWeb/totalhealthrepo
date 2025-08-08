@@ -1,21 +1,29 @@
 import { useState } from 'react';
 import axios from 'axios';
 import '../styles/login.css';
+import { useAuth } from "../auth/authcontext"; // import the hook
 
 export default function Login() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [msg, setMsg] = useState('');
+  const { login } = useAuth(); // get the login function from context
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-  const handleLogin = async (e) => {
+  async function handleSubmit(e) {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/api/login', { email, password });
-      setMsg(res.data.message);
+      const res = await axios.post("http://localhost:5000/api/login", {
+        email,
+        password
+      });
+
+      // Save JWT token to context + localStorage
+      login(res.data.token);
+
+      alert("Login successful!");
     } catch (err) {
-      setMsg(err.response?.data?.error || 'Login failed');
+      alert(err.response?.data?.message || "Login failed");
     }
-  };
+  }
 
   return (
     <div className="login-container">
