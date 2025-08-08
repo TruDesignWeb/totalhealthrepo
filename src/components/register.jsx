@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
+import '../styles/register.css'
 
 export default function Register() {
   const [email, setEmail] = useState('');
@@ -23,9 +24,10 @@ export default function Register() {
 
   return (
     <div className="register-container">
-      <h2>Create an Account</h2>
-      <form onSubmit={handleRegister}>
+      <h2 className = "register-title">Create an Account</h2>
+      <form className = "register-form" onSubmit={handleRegister}>
         <input
+          className = "register-email"
           type="email"
           placeholder="Email"
           value={email}
@@ -34,6 +36,7 @@ export default function Register() {
         />
 
         <input
+          className= "register-password"
           type="password"
           placeholder="Password (min 6 chars)"
           value={password}

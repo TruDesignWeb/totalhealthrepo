@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
+import '../styles/login.css';
 
 export default function Login() {
   const [email, setEmail] = useState('');
@@ -18,9 +19,10 @@ export default function Login() {
 
   return (
     <div className="login-container">
-      <h2>Login</h2>
-      <form onSubmit={handleLogin}>
+      {/* <h2 className = "login-title">Login</h2> */}
+      <form className = "login-form" onSubmit={handleLogin}>
         <input 
+          className = "email-input"
           type="email" 
           placeholder="Email" 
           value={email} 
@@ -28,6 +30,7 @@ export default function Login() {
           required 
         />
         <input 
+          className="password-input"
           type="password" 
           placeholder="Password"
           value={password}
