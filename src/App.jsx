@@ -5,7 +5,9 @@ import Services from './pages/services';
 import Contact from './pages/contact';
 import Navbar from './components/navbar';
 import Footer from './components/footer';
-import Dashboard from './pages/Dashboard';
+
+
+import Dashboard from './pages/dashboard';
 import Login from './components/login';
 import ProtectedRoute from './components/protectedroute';
 import GuestRoute from './components/guestroute';
