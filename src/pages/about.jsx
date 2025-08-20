@@ -27,8 +27,8 @@ export default function About(){
         <Navbar />
         <Banner2 
             image = "/assets/images/milky-way-full-stars-space.jpg"
-            title = "Your Wellness starts here"
-            subtitle= "Discover a new path to living with the fountain of youth"
+            title = "About Us"
+            subtitle= "Meet the team that makes your medical dreams possible"
         />
         
 

@@ -75,6 +75,9 @@ export default function Home() {
       <CustomCursor />
       <Navbar />
       <Banner />
+
+
+
       <div className="content-wrapper">
         
         <Features
@@ -148,8 +151,8 @@ export default function Home() {
 
         <Membership />
 
-        <Register />
-        <Login />
+        {/* <Register />
+        <Login /> */}
 
 
         {/* <InfiniteScroll

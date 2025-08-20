@@ -33,8 +33,8 @@ export default function Navbar() {
 
 
           <ul><Link to="/" className="top-nav-link">Support</Link></ul>
-          <ul><Link to="Podcasts" className="top-nav-link">Podcasts</Link></ul>
-          <ul><Link to="Services" className="top-nav-link">Page</Link></ul>
+          <ul><Link to="/Podcasts" className="top-nav-link">Podcasts</Link></ul>
+          <ul><Link to="/Contact" className="top-nav-link">Contact</Link></ul>
           <ul><Link to="Page4" className="top-nav-link">Page</Link></ul>
         </div>
       </div>
@@ -42,7 +42,7 @@ export default function Navbar() {
       {/* Main Navigation */}
       <nav className="main-navbar" id="navbar">
         <div className="nav-container">
-          <Link to="#" className="logo"><img src="/assets/images/TotalHealthLogo_HorizontalWhite.png" alt="Total Health Logo" className = "logo-img" /></Link>
+          <Link to="/" className="logo"><img src="/assets/images/TotalHealthLogo_HorizontalWhite.png" alt="Total Health Logo" className = "logo-img" /></Link>
           
           <div className={`hamburger ${menuOpen ? 'active' : ''}`} id="hamburger" onClick={toggleMenu}>
             <span></span>
@@ -51,11 +51,10 @@ export default function Navbar() {
           </div>
           
           <ul className={`nav-menu ${menuOpen ? 'active' : ''}`} id="nav-menu">
-            <li className="nav-item"><Link to="/" className="nav-link">Home</Link></li>
             <li className="nav-item"><Link to="/About" className="nav-link">About</Link></li>
             <li className="nav-item"><Link to="/Services" className="nav-link">Services</Link></li>
-            <li className="nav-item"><Link to="/Page4" className="nav-link">Portfolio</Link></li>
-            <li className="nav-item"><Link to="/Contact" className="nav-link">Contact</Link></li>
+            <li className="nav-item"><Link to="/Partners" className="nav-link">Partners</Link></li>
+            <li className="nav-item"><Link to="/Patients" className="nav-link">Patients</Link></li>
             <li className="nav-item"><Link to="/Appointments" className="nav-link cta">Appointments</Link></li>
           </ul>
           

@@ -13,6 +13,8 @@ import ProtectedRoute from './components/protectedroute';
 import GuestRoute from './components/guestroute';
 import Register from './components/register';
 import { useState } from 'react';
+import Partners from './pages/collabpartners';
+import Patients from './pages/patients';
 
 
 export default function App() {
@@ -31,17 +33,21 @@ export default function App() {
       <Routes>
         <Route path="/support" element={<About />} />
         <Route path="/podcasts" element={<About />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
 
         
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
-        
-        <Route path="/page4" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
+
+        <Route path="/partners" element={<Partners />} />
+        <Route path="/patients" element={<Patients />} />
         <Route path="/appointments" element={<About />} />
+
+
+
+
 
 
 
