@@ -1,53 +1,49 @@
-import { useState } from 'react';
-import axios from 'axios';
-import '../styles/login.css';
-import { useAuth } from "../auth/authcontext"; // import the hook
+// Login.jsx
+import React, { useState } from "react";
+import axios from "axios";
 
-export default function Login() {
-  const { login } = useAuth(); // get the login function from context
+export default function Login({ handleLogin }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
 
-  async function handleSubmit(e) {
+  const onSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/api/login", {
+      const res = await axios.post("http://localhost:5000/api/auth/login", {
         email,
-        password
+        password,
       });
 
-      // Save JWT token to context + localStorage
-      login(res.data.token);
-
-      alert("Login successful!");
+      if (res.data.success) {
+        handleLogin(); // ✅ Now this will work
+      }
     } catch (err) {
-      alert(err.response?.data?.message || "Login failed");
+      setError("Invalid email or password");
     }
-  }
+  };
 
   return (
     <div className="login-container">
-      {/* <h2 className = "login-title">Login</h2> */}
-      <form className = "login-form" onSubmit={handleLogin}>
-        <input 
-          className = "email-input"
-          type="email" 
-          placeholder="Email" 
-          value={email} 
-          onChange={(e) => setEmail(e.target.value)} 
-          required 
+      <h2>Login</h2>
+      {error && <p style={{ color: "red" }}>{error}</p>}
+      <form onSubmit={onSubmit}>
+        <input
+          type="email"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
         />
-        <input 
-          className="password-input"
-          type="password" 
+        <input
+          type="password"
           placeholder="Password"
           value={password}
-          onChange={(e) => setPassword(e.target.value)} 
-          required 
+          onChange={(e) => setPassword(e.target.value)}
+          required
         />
         <button type="submit">Login</button>
       </form>
-      {msg && <p>{msg}</p>}
     </div>
   );
 }
