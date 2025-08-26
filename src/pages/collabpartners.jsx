@@ -162,17 +162,33 @@ export default function About(){
         <Navbar />
         <Banner2 
             image = "/assets/images/milky-way-full-stars-space.jpg"
-            title = "Your Wellness starts here"
+            title = "Partners"
             subtitle= "Discover a new path to living with the fountain of youth"
         />
         
 
 
-        <Features
+        {/* <Features
             title="Services"
             cards={featureCards}
             variant="" // Optional: for different styles
-        />
+        /> */}
+
+         <InfiniteScroll
+          items={[
+          { content: "Total Health" },
+          { content: <p>Total Health</p> },
+          { content: "Initiative" },
+          { content: <p>Initiative</p> }
+          ]}
+          isTilted={true}
+          tiltDirection='right'
+          autoplay={true}
+          autoplaySpeed={0.2}
+          autoplayDirection="down"
+          pauseOnHover={true}
+        />       
+         
 
         <Outcomes/>
 
