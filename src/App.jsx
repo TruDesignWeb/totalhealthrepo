@@ -15,6 +15,7 @@ import Register from './components/register';
 import { useState } from 'react';
 import Partners from './pages/collabpartners';
 import Patients from './pages/patients';
+import Membership from './pages/membership';
 
 
 export default function App() {
@@ -31,7 +32,7 @@ export default function App() {
     <>
       <Navbar />
       <Routes>
-        <Route path="/support" element={<About />} />
+        <Route path="/membership" element={<Membership />} />
         <Route path="/podcasts" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />

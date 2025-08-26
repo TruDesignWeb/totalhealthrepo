@@ -28,7 +28,7 @@ export default function Navbar() {
       <div className="top-navbar">
         <div className="top-nav-content">
 
-          <ul><Link to="/" className="top-nav-link">Support</Link></ul>
+          <ul><Link to="/Membership" className="top-nav-link">Membership</Link></ul>
           <ul><Link to="/Podcasts" className="top-nav-link">Podcasts</Link></ul>
           <ul><Link to="/Contact" className="top-nav-link">Contact</Link></ul>
           <ul><Link to="Page4" className="top-nav-link">Page</Link></ul>
