@@ -1,0 +1,102 @@
+/* Layout */
+.philo-section {
+  background: #fffdf0; /* very soft cream */
+  padding: clamp(3rem, 6vw, 6rem) 1.5rem;
+}
+
+.philo-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: clamp(2rem, 5vw, 4rem);
+}
+
+@media (min-width: 980px) {
+  .philo-wrap {
+    grid-template-columns: 1.1fr 1fr; /* slightly wider text column */
+  }
+}
+
+/* Text */
+.philo-copy {
+  max-width: 680px;
+}
+
+.philo-eyebrow {
+  display: inline-block;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  color: #6b6b6b;
+  margin-bottom: 1rem;
+}
+
+.philo-title {
+  font-size: clamp(2rem, 3.5vw, 3.25rem);
+  line-height: 1.15;
+  font-weight: 600;
+  color: #111;
+  margin: 0 0 1.25rem 0;
+  font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
+}
+
+.philo-text {
+  color: #2b2b2b;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+/* Media stack */
+.philo-media {
+  position: relative;
+  min-height: 420px;
+}
+
+@media (min-width: 640px) {
+  .philo-media {
+    min-height: 520px;
+  }
+}
+
+/* Sage frame behind image (the green rectangle) */
+.sage-frame {
+  position: absolute;
+  inset: 0;
+  background: #9fb0a6; /* muted sage */
+  border-radius: 8px;
+  /* shift like the reference */
+  transform: translate(6%, -6%);
+}
+
+/* Foreground image card */
+.image-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow:
+    0 10px 30px rgba(0,0,0,.12),
+    0 20px 60px rgba(0,0,0,.06);
+  /* start slightly above so the parallax can move both ways */
+  will-change: transform;
+  transition: transform 120ms linear;
+  background: #eaeaea;
+}
+
+.image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Nice spacing alignment for very wide screens */
+@media (min-width: 1280px) {
+  .philo-section {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}

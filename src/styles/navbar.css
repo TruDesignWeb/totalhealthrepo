@@ -210,9 +210,30 @@
     transition: 0.3s;
     border-radius: 2px;
 }
-@media (max-width: 768px) {
+
+
+/* Base */
+.main-navbar { position: sticky; top: 0; z-index: 1000; }
+.nav-container { position: relative; overflow: visible; }
+
+
+@media (max-width: 900px) {
   .nav-menu {
     display: none;
+  }
+
+  #nav-menu{
+    position: absolute;
+    top: 100%;           /* below the navbar */
+    left: 0;
+    right: 0;
+    display: none;       /* hidden until active */
+    flex-direction: column;
+    gap: 0.75rem;
+    background: #0e1521; /* or whatever your brand bg is */
+    padding: 1rem 1.25rem;
+    z-index: 1500;       /* above everything */
+    border-bottom: 1px solid rgba(255,255,255,0.08);
   }
 
   .nav-links {
@@ -232,6 +253,12 @@
     display: flex;
   }
 
+    /* Ensure links are visible */
+  #nav-menu .nav-link {
+    color: #fff;
+    padding: 0.5rem 0;
+    text-decoration: none;
+  }
   .nav-link {
     font-size: 1.2rem;
     padding: 1rem;
@@ -266,4 +293,5 @@
   .hamburger.active span:nth-child(3) {
     transform: rotate(-45deg) translate(6px, -6px);
   }
+
 }
