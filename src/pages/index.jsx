@@ -81,7 +81,7 @@ export default function Home() {
       <div className="content-wrapper">
         
         <Features
-          title="Customized Feature Section"
+          title="Feautre Section - Needs Images"
           cards={featureCards}
           variant="" // Optional: for different styles
         />
@@ -91,7 +91,7 @@ export default function Home() {
         <Stats
           title="Our Impact"
           stats={[
-            { target: 120, label: 'Brothers killed' },
+            { target: 120, label: 'Employees' },
             { target: 99, label: '% Recovery Rate' },
             { target: 3000, label: 'Patients Helped' },
             { target: 20, label: 'Years in Operation' }
