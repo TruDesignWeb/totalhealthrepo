@@ -1,5 +1,5 @@
 // File: src/components/Navbar.jsx
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/navbar.css';
 import Home from '../pages/index';
@@ -7,6 +7,7 @@ import Home from '../pages/index';
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,11 +27,6 @@ export default function Navbar() {
       {/* Top Navigation Strip */}
       <div className="top-navbar">
         <div className="top-nav-content">
-          {/* <a href="#support" className="top-nav-link">Support</a>
-          <a href="#blog" className="top-nav-link">Blog</a>
-          <a href="#careers" className="top-nav-link">Careers</a>
-          <a href="#login" className="top-nav-link">Login</a> */}
-
 
           <ul><Link to="/" className="top-nav-link">Support</Link></ul>
           <ul><Link to="/Podcasts" className="top-nav-link">Podcasts</Link></ul>
