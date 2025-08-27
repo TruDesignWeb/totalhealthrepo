@@ -16,6 +16,7 @@ import { useState } from 'react';
 import Partners from './pages/collabpartners';
 import Patients from './pages/patients';
 import Membership from './pages/membership';
+import Appointments from './pages/appointments';
 
 
 export default function App() {
@@ -44,7 +45,7 @@ export default function App() {
 
         <Route path="/partners" element={<Partners />} />
         <Route path="/patients" element={<Patients />} />
-        <Route path="/appointments" element={<About />} />
+        <Route path="/appointments" element={<Appointments />} />
 
 
 
