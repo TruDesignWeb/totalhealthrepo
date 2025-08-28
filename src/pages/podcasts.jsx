@@ -11,7 +11,7 @@ import Journey from '../components/journey';
 import Footer from '../components/footer';
 import CustomCursor from '../components/customcursor';
 import useRevealOnScroll from '../hooks/useRevealOnScroll';
-import '../styles/animations.css';
+import './podcasts.css';
 import InfiniteScroll from '../components/infinitescroll';
 import TiltedCard from '../components/tiltedcard';
 import FluidGlass from '../components/fluidglass';
