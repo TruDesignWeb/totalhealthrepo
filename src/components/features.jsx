@@ -3,6 +3,7 @@ import React from 'react';
 import '../styles/features.css';
 import TiltedCard from './tiltedcard';
 import MagneticButton from './magneticbutton';
+import { Link } from 'react-router-dom';
 
 export default function Features({
   title = 'Revolutionary Healthcare',
@@ -15,7 +16,10 @@ export default function Features({
         <h2 className="section-title">{title}</h2>
         <div className="features-grid">
           {cards.map((card, idx) => (
+            <Link key = {idx} to={card.link}>
             <TiltedCard key={idx} {...card} />
+            </Link>
+          
           ))}
         </div>
       </div>

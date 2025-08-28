@@ -35,6 +35,7 @@ const featureCards = [
       displayOverlayContent: true,
       overlayContent: <p className="tilted-card-demo-text">Kendrick Lamar - GNX</p>,
       backgroundColor: 'rgba(0,0,0,0)',
+      link: '/Podcasts',
     },{
       imageSrc: 'https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58',
       altText: 'Kendrick Lamar - GNX Album Cover',
@@ -50,6 +51,7 @@ const featureCards = [
       displayOverlayContent: true,
       overlayContent: <p className="tilted-card-demo-text">Kendrick Lamar - GNX</p>,
       backgroundColor: 'rgba(0,0,0,0)',
+      link: 'Podcasts',
       },
     {
       imageSrc: 'https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58',
@@ -66,6 +68,7 @@ const featureCards = [
       displayOverlayContent: true,
       overlayContent: <p className="tilted-card-demo-text">Kendrick Lamar - GNX</p>,
       backgroundColor: 'rgba(0,0,0,0)',
+      link: 'Podcasts',
       }];
 
 export default function Home() {
@@ -81,7 +84,7 @@ export default function Home() {
       <div className="content-wrapper">
         
         <Features
-          title="Feautre Section - Needs Images"
+          title="Feature Section - Needs Images"
           cards={featureCards}
           variant="" // Optional: for different styles
         />
