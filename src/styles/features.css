@@ -230,3 +230,23 @@
     font-size: 1rem;
   }
 }
+
+
+
+/*-----------------------Podcasts specific------------------------------*/
+
+.features-podcasts{
+  padding: 6rem 2rem;
+  background: rgb(25, 35, 83);
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: auto;   /* Ensure full width */
+  box-shadow: 
+    0 -10px 30px rgba(0, 0, 0, 0.1),
+    0 -20px 60px rgba(0, 0, 0, 0.05);
+}
+

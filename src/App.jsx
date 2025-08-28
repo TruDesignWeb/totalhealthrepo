@@ -17,6 +17,7 @@ import Partners from './pages/collabpartners';
 import Patients from './pages/patients';
 import Membership from './pages/membership';
 import Appointments from './pages/appointments';
+import Podcasts from './pages/podcasts';
 
 
 export default function App() {
@@ -34,7 +35,7 @@ export default function App() {
       <Navbar />
       <Routes>
         <Route path="/membership" element={<Membership />} />
-        <Route path="/podcasts" element={<About />} />
+        <Route path="/podcasts" element={<Podcasts />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
 
