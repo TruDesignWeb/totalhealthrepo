@@ -10,7 +10,7 @@ export default function Features({
   variant = '',
 }) {
   return (
-    <section className={`features ${variant}`}>
+    <section className={`features-${variant}`}>
       <div className="features-container">
         <h2 className="section-title">{title}</h2>
         <div className="features-grid">
