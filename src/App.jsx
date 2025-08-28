@@ -18,6 +18,7 @@ import Patients from './pages/patients';
 import Membership from './pages/membership';
 import Appointments from './pages/appointments';
 import Podcasts from './pages/podcasts';
+import Refer from './pages/referringpartners.jsx';
 
 
 export default function App() {
@@ -37,7 +38,7 @@ export default function App() {
         <Route path="/membership" element={<Membership />} />
         <Route path="/podcasts" element={<Podcasts />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/referring-partners" element={<Refer />} />
 
         
         <Route path="/" element={<Home />} />

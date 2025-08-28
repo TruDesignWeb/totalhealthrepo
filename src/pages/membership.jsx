@@ -76,7 +76,7 @@ export default function About({
         <Navbar />
         <Banner2 
             image = "/assets/images/milky-way-full-stars-space.jpg"
-            title = "About Us"
+            title = "Membership"
             subtitle= "Meet the team that makes your medical dreams possible"
         />
         

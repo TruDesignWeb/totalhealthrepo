@@ -31,7 +31,7 @@ export default function Navbar() {
           <ul><Link to="/Membership" className="top-nav-link">Membership</Link></ul>
           <ul><Link to="/Podcasts" className="top-nav-link">Podcasts</Link></ul>
           <ul><Link to="/Contact" className="top-nav-link">Contact</Link></ul>
-          <ul><Link to="Page4" className="top-nav-link">Page</Link></ul>
+          <ul><Link to="/Referring-Partners" className="top-nav-link">Referring Partners</Link></ul>
         </div>
       </div>
 
