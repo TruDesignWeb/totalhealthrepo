@@ -10,6 +10,7 @@ export default function Journey({
   ctaText = 'Extend Your Lifespan',
   features = [],
   variant = '',
+  ctaLink = '',
 }) {
   return (
     <section className={`journey-section ${variant}`}>
@@ -17,11 +18,16 @@ export default function Journey({
         <div className="journey-hero-section">
           <h1 className="journey-hero-title">{title}</h1>
           <p className="journey-hero-subtitle">{subtitle}</p>
-          <button className="journey-cta-button">{ctaText}</button>
+          
+
+          {/* Make the CTA a link (internal by default) */}
+          <Link to={ctaLink} className="journey-cta-button">
+            {ctaText}
+          </Link>
         </div>
 
         {features.map(({ title, description, className, link }, idx) => (
-          <Link key = {idx} to={features.link}>
+          <Link key = {idx} to={link}>
           <div
             key={idx}
             className={`journey-feature-card ${className ?? ''}`.trim()}
@@ -30,11 +36,15 @@ export default function Journey({
             <p className="journey-feature-description">{description}</p>
           </div>
           </Link>
+
         ))}
       </div>
     </section>
   );
 }
+
+
+
 
 
 

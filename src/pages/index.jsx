@@ -133,6 +133,7 @@ export default function Home() {
             subtitle="Personalized healthcare solutions designed to help you thrive."
             ctaText="Get Started Today"
             variant="light-theme"
+            ctaLink = "/Podcasts"
             features={[
               {
                 title: 'Advanced Testing',
