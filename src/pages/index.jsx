@@ -138,16 +138,19 @@ export default function Home() {
                 title: 'Advanced Testing',
                 description: 'Gain insights through our comprehensive diagnostics.',
                 className: 'advanced-testing',
+                link: 'Podcasts',
               },
               {
                 title: 'Tailored Programs',
                 description: 'Receive custom plans based on your unique biology.',
                 className: 'tailored-programs',
+                link: 'Podcasts',
               },
               {
                 title: 'Cutting-Edge Therapies',
                 description: 'Access the latest regenerative medicine solutions.',
                 className: 'cutting-edge-therapies',
+                link: 'Podcasts',
               },
             ]}
         />

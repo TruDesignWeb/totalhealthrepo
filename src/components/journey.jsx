@@ -2,6 +2,7 @@
 // File: src/components/Journey.jsx
 import React from 'react';
 import '../styles/journey.css';
+import { Link } from 'react-router-dom';
 
 export default function Journey({
   title = 'Your journey starts here',
@@ -19,7 +20,8 @@ export default function Journey({
           <button className="journey-cta-button">{ctaText}</button>
         </div>
 
-        {features.map(({ title, description, className }, idx) => (
+        {features.map(({ title, description, className, link }, idx) => (
+          <Link key = {idx} to={features.link}>
           <div
             key={idx}
             className={`journey-feature-card ${className ?? ''}`.trim()}
@@ -27,6 +29,7 @@ export default function Journey({
             <h2 className="journey-feature-title">{title}</h2>
             <p className="journey-feature-description">{description}</p>
           </div>
+          </Link>
         ))}
       </div>
     </section>
