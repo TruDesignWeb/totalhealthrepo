@@ -160,6 +160,36 @@ export default function Home() {
               title: 'Better Digestion',
               description: 'Healthier gut and improved nutrient absorption.',
             },
+            {
+              icon: '💪',
+              title: 'Stronger Immunity',
+              description: 'Fortified defenses against illness and faster recovery times.',
+            },
+            {
+              icon: '🧘',
+              title: 'Mental Clarity',
+              description: 'Reduced stress and improved focus and decision-making.',
+            },
+            {
+              icon: '🍽️',
+              title: 'Better Digestion',
+              description: 'Healthier gut and improved nutrient absorption.',
+            },
+            {
+              icon: '💪',
+              title: 'Stronger Immunity',
+              description: 'Fortified defenses against illness and faster recovery times.',
+            },
+            {
+              icon: '🧘',
+              title: 'Mental Clarity',
+              description: 'Reduced stress and improved focus and decision-making.',
+            },
+            {
+              icon: '🍽️',
+              title: 'Better Digestion',
+              description: 'Healthier gut and improved nutrient absorption.',
+            },
           ]}
         />
 
