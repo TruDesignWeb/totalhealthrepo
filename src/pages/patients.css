@@ -100,3 +100,17 @@
     padding-right: 2rem;
   }
 }
+
+.th-image-wrap {
+  overflow: hidden;
+  will-change: transform; /* optimize GPU acceleration */
+}
+
+.th-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+

@@ -16,7 +16,7 @@ import InfiniteScroll from '../components/infinitescroll';
 import TiltedCard from '../components/tiltedcard';
 import FluidGlass from '../components/fluidglass';
 import Banner2 from '../components/banner2';
-import './about.css';
+import './patients.css';
 
 import { useEffect, useRef, useState } from "react";
 
@@ -27,6 +27,8 @@ export default function About({
   title = "Look and feel your best naturally",
   copy = `We want to help you with your health and wellness at Total Health Initiative, I really like being healthy do you?`,
   image = "/assets/images/milky-way-full-stars-space.jpg",
+  thimage = "/assets/images/milky-way-full-stars-space.jpg",
+  
 }) {
     useRevealOnScroll()
   const imgRef = useRef(null);
@@ -104,6 +106,36 @@ export default function About({
             </div>
         </div>
     </section>
+
+
+
+    <section className="philo-section" aria-labelledby="philo-title">
+    <div className="philo-wrap">
+       {/* Right: image stack with sage frame */}
+        <div className="philo-media">
+        <div className="sage-frame" aria-hidden="true" />
+        <div
+            className="image-card"
+            ref={imgRef}
+            style={{ transform: `translateY(${y}px)` }}
+        >
+            <img src={image} alt="Spa reception with serene, warm tones" />
+        </div>
+        </div>
+        
+        {/* Left: text */}
+        <div className="philo-copy">
+        <span className="philo-eyebrow">{eyebrow}</span>
+        <h2 id="philo-title" className="philo-title">
+            {title}
+        </h2>
+        <p className="philo-text">{copy}</p>
+        </div>
+
+       
+    </div>
+</section>
+    
 
         
         <Stats />
