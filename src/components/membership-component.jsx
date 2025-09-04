@@ -26,7 +26,7 @@ export default function Membership() {
         <h2 className="card-title">EPIC</h2>
         <h3 className="card-subtitle">Re-engineer your potential<br/>(Interview Only)</h3>
         <p className="card-description">Our personalized high performance membership.</p>
-        <a href="" className="learn-more-btn">Request Interview</a>
+        <a href="/Membership" className="learn-more-btn">Request Interview</a>
       </div>
     </div>
   );
