@@ -38,7 +38,7 @@ export default function Navbar() {
       {/* Main Navigation */}
       <nav className="main-navbar" id="navbar">
         <div className="nav-container">
-          <Link to="/" className="logo"><img src="/assets/images/TotalHealthLogo_HorizontalWhite.png" alt="Total Health Logo" className = "logo-img" /></Link>
+          <Link to="/" className="logo"><img src="\assets\images\OWN Branding\OWN Final Logos\Print CMYK\Logo Icon\PNG\OWN_Icon_CMYK_White.png" alt="Total Health Logo" className = "logo-img"/></Link>
           
           <div className={`hamburger ${menuOpen ? 'active' : ''}`} id="hamburger" onClick={toggleMenu}>
             <span></span>

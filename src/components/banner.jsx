@@ -15,7 +15,7 @@ export default function Banner() {
       </div>
       <div className="banner-content">
         {/* <h1>Welcome to Total Health</h1> */}
-        <img className="banner-logo" src = "/assets/images/TotalHealthLogo_VerticalWhite.png"/>
+        <img className="banner-logo" src = "\assets\images\OWN Branding\OWN Final Logos\Print CMYK\Primary Logo\PNG\OWN_Primary Logo_CMYK_White.png" />
         <p className = "banner-text">Experience cutting-edge treatments with all star doctors</p>
         {/* className="flex justify-center items-center h-screen bg-gray-200" */}
         <a href="#"><div className="banner-btn" style={{ perspective: 1000 }}>
